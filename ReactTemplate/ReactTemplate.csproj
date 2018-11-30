@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="ClientApp\actions\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

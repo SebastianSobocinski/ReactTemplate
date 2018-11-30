@@ -1,7 +1,6 @@
 ﻿import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { BrowserRouter } from 'react-router-dom';
 import { AppContainer } from 'react-hot-loader';
 
 import App from './components/App';
@@ -18,9 +17,7 @@ function renderApp()
     const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
     ReactDOM.render(
         <AppContainer>
-            <BrowserRouter>
                 <App />
-            </BrowserRouter>
         </AppContainer>,
         document.getElementById('root'));
 
