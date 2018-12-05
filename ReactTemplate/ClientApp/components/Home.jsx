@@ -1,6 +1,8 @@
 ﻿import * as React from 'react';
 import { connect } from 'react-redux';
 
+import { homeAddItem } from '../actions/homeActions';
+
 export class Home extends React.Component
 {
     mapProducts()
@@ -15,28 +17,14 @@ export class Home extends React.Component
         return <div>
             <button onClick={() => this.props.addItem("ABC")}> ADD </button>
             {this.mapProducts()}
-            </div>
+        </div>
     }
 }
 
+const mapStateToProps = state => ({ home: state.home })
 
+const mapDispatchToProps = dispatch => ({
+    addItem: (item) => dispatch(homeAddItem(item))
+})
 
-function mapStateToProps(state)
-{
-    return {
-        home: state.home
-    }
-}
-function mapDispatchToProps(dispatch)
-{
-    return {
-        addItem: (item) =>
-        {
-            dispatch({
-                type: 'ADD',
-                payload: item
-            })
-        }
-    }
-}
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

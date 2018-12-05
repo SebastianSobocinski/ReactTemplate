@@ -2,7 +2,7 @@
 {
     switch (action.type)
     {
-        case 'ADD':
+        case 'HOME_ADD':
             return [...state, action.payload]
         default:
             return state;

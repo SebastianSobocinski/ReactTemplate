@@ -20,6 +20,5 @@ function renderApp()
                 <App />
         </AppContainer>,
         document.getElementById('root'));
-
 }
 renderApp();
